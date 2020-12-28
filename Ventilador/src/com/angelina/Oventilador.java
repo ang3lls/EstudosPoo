@@ -1,10 +1,10 @@
 package com.angelina;
 
 public class Oventilador {
-    String marca;
-    String cor;
-    int velocidade;
-    boolean ligado;
+    public String marca;
+    public String cor;
+    private int velocidade;
+    protected boolean ligado;
 
     void status(){
         System.out.println("Um ventilador " + this.marca + " cor " + this.cor);
@@ -16,6 +16,7 @@ public class Oventilador {
             System.out.println("Sem velociade, Ventilador DESLIGADO!");
         }
         else{
+            this.velocidade = 2;
             System.out.println("Ventilador ligado na velocicade " + this.velocidade);
         }
     }

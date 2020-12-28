@@ -6,7 +6,6 @@ public class Main {
 	    Oventilador V1 = new Oventilador();
 	    V1.marca = "Philco";
 	    V1.cor = "Preto";
-	    V1.velocidade = 2;
 	    V1.liga();
 	    V1.status();
 	    V1.vel();
