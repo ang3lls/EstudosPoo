@@ -26,6 +26,21 @@ public class Lutador {
         this.setEmpates(empates);
     }
 
+    @Override
+    public String toString() {
+        return "Lutador{" +
+                "nome='" + nome + '\'' +
+                ", nacionalidade='" + nacionalidade + '\'' +
+                ", idade=" + idade +
+                ", altura=" + altura +
+                ", peso=" + peso +
+                ", categoria='" + categoria + '\'' +
+                ", vitorias=" + vitorias +
+                ", derrotas=" + derrotas +
+                ", empates=" + empates +
+                '}';
+    }
+
     public void apresentacao(){
         System.out.println("-----Apresentação-----");
         System.out.println("Lutador: " + getNome());
