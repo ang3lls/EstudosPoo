@@ -26,6 +26,38 @@ public class Lutador {
         this.setEmpates(empates);
     }
 
+    public void apresentacao(){
+        System.out.println("-----Apresentação-----");
+        System.out.println("Lutador: " + getNome());
+        System.out.println("Origem: " + getNacionalidade());
+        System.out.println(getIdade() + " anos");
+        System.out.println(getAltura() + "m de altura");
+        System.out.println("Pesando " + getPeso() + "Kg");
+        System.out.println("Ganhou: " + getVitorias());
+        System.out.println("Perdeu: " + getDerrotas());
+        System.out.println("Empatou: " + getEmpates());
+    }
+
+    public void status(){
+        System.out.println("-------Status-------");
+        System.out.println(getNome() + " é um peso: " + getCategoria());
+        System.out.println(getVitorias() + " vitorias");
+        System.out.println(getDerrotas() + " derotas");
+        System.out.println(getEmpates() + " empates");
+    }
+
+    public void ganharLuta(){
+        this.setVitorias(this.getVitorias() + 1);
+    }
+
+    public void perderLuta(){
+        this.setDerrotas(this.getDerrotas() + 1);
+    }
+
+    public void empatarLuta(){
+        this.setEmpates(this.getEmpates() + 1);
+    }
+
     public String getNome() {
         return nome;
     }
@@ -64,14 +96,25 @@ public class Lutador {
 
     public void setPeso(float peso) {
         this.peso = peso;
+        this.setCategoria();
     }
 
     public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    private void setCategoria() {
+        if (this.peso < 52.2) {
+            this.categoria = "Invalid0";
+        } else if (this.peso <= 70.3){
+            this.categoria = "Leve";
+        } else if (this.peso <= 83.9){
+            this.categoria = "Medio";
+        } else if (this.peso <= 120.2){
+            this.categoria = "Pesado";
+        } else{
+            this.categoria = "Invalido";
+        }
     }
 
     public int getVitorias() {
@@ -96,22 +139,6 @@ public class Lutador {
 
     public void setEmpates(int empates) {
         this.empates = empates;
-    }
-
-    public void apresentacao(){
-
-    }
-
-    public void status(){
-
-    }
-
-    public void ganharLuta(){
-
-    }
-
-    public void perderLuta(){
-
     }
 }
 

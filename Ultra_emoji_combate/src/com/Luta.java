@@ -14,6 +14,14 @@ public class Luta {
         this.setAprovada(aprovada);
     }
 
+    public void marcarLuta(){
+
+    }
+
+    public void lutar(){
+
+    }
+
     public String getDesafiado() {
         return desafiado;
     }
@@ -46,11 +54,5 @@ public class Luta {
         this.aprovada = aprovada;
     }
 
-    public void marcarLuta(){
 
-    }
-
-    public void lutar(){
-
-    }
 }
