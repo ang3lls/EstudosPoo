@@ -29,5 +29,7 @@ public class Main {
         Luta UEC01 = new Luta(l[0], l[1], 3, true);
         UEC01.marcarLuta(l[0],l[1]);
         UEC01.lutar();
+        l[0].status();
+        l[1].status();
     }
 }
