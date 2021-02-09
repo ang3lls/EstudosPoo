@@ -2,6 +2,7 @@ package com.angelina;
 
 import com.angelina.ave.Arara;
 import com.angelina.mamifero.Cachorro;
+import com.angelina.mamifero.Mamifero;
 import com.angelina.peixe.Goldfish;
 import com.angelina.reptil.Cobra;
 import com.angelina.reptil.Tartaruga;
@@ -9,6 +10,7 @@ import com.angelina.reptil.Tartaruga;
 public class Main {
     public static void main(String[] args) {
 
+        Mamifero m =  new Mamifero(40.00f, 10, 4);
         Arara a = new Arara(4.6f, 3, 2);
         Cachorro c = new Cachorro(15.00f, 3, 4);
         Goldfish g = new Goldfish(0.4f, 4, 0);
@@ -19,6 +21,7 @@ public class Main {
         a.alimentar();
         a.emitirSom();
 
+        m.emitirSom();
         c.enterrarOssso();
         c.emitirSom();
 
